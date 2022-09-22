@@ -100,6 +100,14 @@ jobs:
             npm install
             npm test
             
+  scan-frontend:
+    docker:
+      # Docker image here
+    steps:
+      # Checkout code from git
+      # Restore from cache
+      # Your job code here
+            
 workflows:
   default:
     jobs:
