@@ -71,6 +71,14 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-build
+          
+  test-frontend:
+    docker:
+      # Docker image here
+    steps:
+      # Checkout code from git
+      # Restore from cache
+      # Your job code here
             
 workflows:
   default:
