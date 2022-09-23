@@ -176,10 +176,13 @@ jobs:
       
   configure-infrastructure:
     docker:
-      - image: cimg/base:stable
+      - image: amazon/aws-cli
     steps:
       - checkout
-      - install_awscli
+      - run:
+          name: Install tar utility
+          command: |
+            yum install -y tar gzip
       - install_ansible
       - add_ssh_keys:
           fingerprints: ["a6:1d:c3:ae:8a:a0:85:9a:60:ac:0b:4f:86:92:24:bb"]
