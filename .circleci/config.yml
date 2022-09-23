@@ -198,6 +198,10 @@ jobs:
             apk add --update ansible
             apk add openssh-client
             pip3 install awscli
+            sudo apt update
+            sudo apt install software-properties-common
+            sudo add-apt-repository --yes --update ppa:ansible/ansible
+            sudo apt install ansible
       - add_ssh_keys:
           fingerprints: ["a6:1d:c3:ae:8a:a0:85:9a:60:ac:0b:4f:86:92:24:bb"]
       - attach_workspace:
