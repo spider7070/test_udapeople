@@ -204,7 +204,7 @@ jobs:
   configure-infrastructure:
       docker:
       - image: cimg/base:stable
-    steps:
+      steps:
       - checkout
       - install_awscli
       - install_ansible
