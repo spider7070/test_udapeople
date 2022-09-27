@@ -12,10 +12,11 @@
 - name: "Installing Node Dependencies"
   shell: |
     cd ~/backend-app
-    npm install
-    npm update
-    npm audit
-    npm test
+  apt:
+    name: ['nodejs', 'npm']
+    state: latest
+    update_cache: yes
+    
 - name: "Executing Node app with PM2"
   shell: |
     cd ~/backend-app/dist
